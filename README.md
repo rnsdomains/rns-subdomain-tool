@@ -42,4 +42,4 @@ Read about:
 In a terminal, run `node api/app.js`
 By default, you will the site in: http://127.0.0.1:3001
 
-![ui]()
+![ui](/docs/images/ui.png)
