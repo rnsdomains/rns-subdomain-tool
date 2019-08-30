@@ -1,0 +1,35 @@
+{
+    "port": 3001,
+    "database": {
+        "url": "mongodb://localhost:27017/"        
+    },
+    "cors": {
+        "ui" : "http://127.0.0.1:3001"
+    },
+    "node": "https://public-node.rsk.co",   
+    "chainId": 30,
+    "gasLimit": "0x67C280",
+    "contractLimitCallsPerHour" : 1000,    
+    "domainOwnerAccount":{
+        "domain" : "example.rsk",
+        "address": "",
+        "privateKey": ""
+    },
+    "contracts": {
+        "rnsAddress": "",
+        "registrarAddress" : "",
+        "whitelistAddress": ""
+    },
+    "recaptcha":{
+        "key":""
+    },
+    "smtp":{
+        "on": true,
+        "host":"",
+        "port":"",
+        "user":"",
+        "password":"",
+        "from":"RNS Domains <rnsdomains@rifos.org>",
+        "subject":"Successful registration"
+    }
+}
