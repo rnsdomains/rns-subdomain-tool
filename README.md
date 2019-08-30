@@ -29,13 +29,13 @@ Read about:
 - The tool could register until 4 simultaneous registrations (it's related with an RSK network limitation).
 
 ## Setup
-### 1. [Technical setup](/docs/TechnicalSetup)
+### 1. [Technical setup](/docs/TechnicalSetup.md)
 
 
 ### 2. Contracts
 
 
-### 3. [Customize the UI](/docs/CustomizeTheUI)
+### 3. [Customize the UI](/docs/CustomizeTheUI.md)
 
 
 ## Running the tool
