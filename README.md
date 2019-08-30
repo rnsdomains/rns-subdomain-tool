@@ -29,14 +29,58 @@ Read about:
 - The tool could register until 4 simultaneous registrations (it's related with an RSK network limitation).
 
 ## Setup
-### Technical setup
+### 1. Technical setup
+#### Site & node config
+In `api/config.json` you can set up:
+- `"port": 3001` -> the port where the tool runs
+- `"database.url" :"mongodb://localhost:27017/"` -> URL where mongodb is running
+- `"node": "https://public-node.rsk.co"` -> the RSK node to connect to
+- `"chainId": 30` -> chainId value, it depens on the network you're using (31 testnet, 30 mainnet, 33 regtest)
+- `"gasLimit": "0x67C280"`-> gasLimit used when registering a subnode (suggested `0x67C280`)
+- `"contractLimitCallsPerHour": 1000` -> it's a validation related with the maximum amount of times you allow the tool to call the smart contract per hour
+- `"cors.ui": "127.0.0.1:3000"` -> to configure CORS policies if necessary
 
-### Customize the UI
-#### Add a custom name
+Also in `public/config.json` you need to set up:
+- `"api.host": "127.0.0.1:3001"` -> with the URL where the tool is deployed
+
+#### Recaptcha
+The site uses reCaptcha and was tried with reCaptcha v2. 
+As a requirement need to generate your own pair client-server key.
+Read about it [here](https://www.google.com/recaptcha/intro/v3.html).
+With your key-pair, you need to:
+- Set client key in `public/index.html` inside `data-sitekey` attribute:
+`<div class="g-recaptcha" data-sitekey=""></div>`
+- Set server key as value of `recaptcha.key` in file `api/config.json` 
+
+
+#### SMTP
+
+#### Contracts
+
+
+### 2. Customize the UI
+#### Add a custom name and base domain
+- Replace `custom.title` in file `/public/config.json/` with the domain. Example: **Community**.
+- Replace `custom.parentDomain` in file `/public/config.json/` with the domain under which subdomains will be registered with the format `.domain.rsk`. Example: **.community.rsk**.
 
 #### Add a custom logo
+- Replace `/public/images/logo-custom.png` with the logo you want to see in navbar (top-right side).
+- Replace `custom.logoClickUrl` in file `/public/config.json/` with the URL you want the user see when clicking your logo.
 
 ### Registration email template
+You can change registration email template replacing this file: `api/resources/emailBody.html`
+**IMPORTANT**: you need to include the tokens: `_domain_`, `_address_` and `_txHash_` in your template and the tool will replace them with the users' information. 
+By default the template is like this:
 
+![email example]()
+
+### Explorer
+When the transaction to register a subdomain is sent to RSK blockchain, the user could go to see it in an RSK explorer. 
+The tool uses [https://explorer.rsk.co](https://explorer.rsk.co).
+If you prefer you can change it, by setting the key `explorer.tx` inside the `public/config.json` file.
 
 ## Running the tool
+In a terminal, run `node api/app.js`
+By default, you will the site in: http://127.0.0.1:3001
+
+![ui]()
