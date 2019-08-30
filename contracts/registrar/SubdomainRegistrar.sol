@@ -5,10 +5,10 @@ import "../util/AbstractWhitelist.sol";
 import "../resolver/AbstractAddrResolver.sol";
 
 /**
- * @title PriceSubdomainRegistrar
+ * @title SubdomainRegistrar
  * Allows anyone who is whitelisted to create subnodes under a given RNS node 
  */
-contract PriceSubdomainRegistrar {
+contract SubdomainRegistrar {
     address public owner = msg.sender;
     AbstractRNS public rns;
     AbstractWhitelist public whitelist;    

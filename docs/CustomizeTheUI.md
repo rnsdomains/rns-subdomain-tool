@@ -18,7 +18,7 @@ You can change registration email template replacing this file: `api/resources/e
 **IMPORTANT**: you need to include the tokens: `_domain_`, `_address_` and `_txHash_` in your template and the tool will replace them with the users' information. 
 By default the template is like this:
 
-![email example](/images/email.png)
+![email example](/docs/images/email.png)
 
 ## Explorer
 When the transaction to register a subdomain is sent to RSK blockchain, the user could go to see it in an RSK explorer. 

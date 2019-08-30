@@ -3,7 +3,7 @@ var rskLib = require('./rsk.js');
 var namehash = require('eth-ens-namehash').hash;
 var rnsContract = require('../abi/registry.js');
 var whitelistContract = require('../abi/whitelist.js');
-var registrarContract = require('../abi/priceSubdomainRegistrar.js');
+var registrarContract = require('../abi/subdomainRegistrar.js');
 var CONFIG = require('../config.json');
 
 var domainOwnerAccount = CONFIG.domainOwnerAccount;

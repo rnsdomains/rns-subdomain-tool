@@ -32,7 +32,7 @@ Read about:
 ### 1. [Technical setup](/docs/TechnicalSetup.md)
 
 
-### 2. Contracts
+### 2. [Contracts](/docs/ContractsSetup.md)
 
 
 ### 3. [Customize the UI](/docs/CustomizeTheUI.md)
