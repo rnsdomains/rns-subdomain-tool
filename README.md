@@ -20,7 +20,7 @@ Read about:
 - npm >= 6.8.0
 - MongoDB = 3.6.9
 - RecaptchaV2 keys (pair client & server)
-- An RSK account with balance (to pay the registration)
+- A cow account: an RSK address with its private key (to pay the registration) 
 - Be the owner of the domain under which subdomains will be registered
 - SMTP credentials (if you're interested in sending the user a register confirmation)
 - An RSK node with no limitations about requests' quantity 
