@@ -45,12 +45,15 @@ Also in `public/config.json` you need to set up:
 
 #### Recaptcha
 The site uses reCaptcha and was tried with reCaptcha v2. 
-As a requirement need to generate your own pair client-server key.
-Read about it [here](https://www.google.com/recaptcha/intro/v3.html).
-With your key-pair, you need to:
-- Set client key in `public/index.html` inside `data-sitekey` attribute:
+
+As a requirement you need to generate your own keys for client-server.
+Read about how to get them [here](https://www.google.com/recaptcha/intro/v3.html).
+With your key-pair, you need to set:
+- Client key in `public/index.html` inside `data-sitekey` attribute:
+
 `<div class="g-recaptcha" data-sitekey=""></div>`
-- Set server key as value of `recaptcha.key` in file `api/config.json` 
+
+- Server key as value of `recaptcha.key` in file `api/config.json` 
 
 
 #### SMTP
