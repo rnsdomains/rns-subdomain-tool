@@ -1,4 +1,4 @@
-#Technical Setup
+# Technical Setup
 
 ## Site & node config
 In `api/config.json` you can set up:
