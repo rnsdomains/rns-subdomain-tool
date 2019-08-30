@@ -1,4 +1,9 @@
+# Customize the UI
 
+- [Add a custom name and base domain](#Add-a-custom-name-and-base-domain)
+- [Add a custom logo](#Add-a-custom-logo)
+- [Registration email template](#Registration-email-template)
+- [Explorer](#Explorer)
 
 ## Add a custom name and base domain
 - Replace `custom.title` in file `/public/config.json/` with the domain. Example: **Community**.
