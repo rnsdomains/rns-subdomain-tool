@@ -41,3 +41,11 @@ In a terminal, run `node api/app.js`
 By default, you will see the site in: http://127.0.0.1:3001
 
 ![ui](/docs/images/ui.png)
+
+## Querying the database
+Database name: `subdomainsTool`
+Collection: `registrations`
+
+Use these commands to get all the subdomains registrations:
+> use subdomainsTool
+> db.registrations.find({})
