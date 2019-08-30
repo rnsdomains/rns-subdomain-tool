@@ -1,6 +1,10 @@
 # Technical Setup
 
-## Site & node config
+- [Site and node config](#Site-and-node-config)
+- [Recaptcha](#Recaptcha)
+- [SMTP](#SMTP)
+
+## Site and node config
 In `api/config.json` you can set up:
 
 - `"port": 3001` -> the port where the tool runs
