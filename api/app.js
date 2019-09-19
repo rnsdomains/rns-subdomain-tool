@@ -20,19 +20,8 @@ var options = {
     optionsSuccessStatus: 200      
 }
 
-app.use(logger(function (tokens, req, res) {
-    return [
-      new Date(),
-      req.headers['x-forwarded-for'] || req.connection.remoteAddress,
-      tokens.method(req, res),
-      tokens.url(req, res),
-      tokens.status(req, res),
-      tokens.res(req, res, 'content-length'), '-',
-      tokens['response-time'](req, res), 'ms'  
-    ].join(' ')
-}));
-
-database.connect(config.database.url);
+initLogger();
+initDatabase();
 
 app.use(cors());
 app.use(bodyParser.json())
@@ -195,9 +184,9 @@ function reachCallLimit(){
 function updateCacheDateIfNecessary(){
     var actualDate = new Date();
     var cachedDate = cache.get(DATE);
-    if(sameDay(actualDate, cachedDate))
-        if(sameHour(actualDate, cachedDate))
-            return;
+
+    if(sameDay(actualDate, cachedDate) && sameHour(actualDate, cachedDate))
+        return;
 
     cache.put(DATE, actualDate);
     cache.put(CALLSAMOUNT, 0);
@@ -272,6 +261,24 @@ function sendNotificationByEmail(domain, addr, mail, txHash){
         console.log(colors.red("Error sending email to " + mail + "Info: " + domain + " / " + addr + " / " + txHash + ". Exception: " + ex.toString()));
     }
 
+}
+
+function initLogger(){
+    app.use(logger(function (tokens, req, res) {
+        return [
+          new Date(),
+          req.headers['x-forwarded-for'] || req.connection.remoteAddress,
+          tokens.method(req, res),
+          tokens.url(req, res),
+          tokens.status(req, res),
+          tokens.res(req, res, 'content-length'), '-',
+          tokens['response-time'](req, res), 'ms'  
+        ].join(' ')
+    }));
+}
+
+function initDatabase(){
+    database.connect(config.database.url);
 }
 
 module.exports = app
