@@ -11,10 +11,6 @@ function readConfig(){
 
 readConfig();
 
-function getBalance(address, cb){
-  web3.eth.getBalance(address, cb);
-}
-
 async function getTransactionStatus(txHash){
   var receipt = await web3.eth.getTransactionReceipt(txHash);
   if(!receipt) return "NOT_FOUND";
