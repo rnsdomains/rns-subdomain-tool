@@ -21,7 +21,7 @@ Read about:
 - MongoDB = 3.6.9
 - RecaptchaV2 keys (pair client & server)
 - A cow account: an RSK address with its private key (to pay the registration) 
-- Be the owner of the domain under which subdomains will be registered
+- The domain under which subdomains will be registered needs to be available or you're the owner
 - SMTP credentials (if you're interested in sending the user a register confirmation)
 - An RSK node with no limitations about requests' quantity 
 
@@ -31,15 +31,24 @@ Read about:
 ## Setup
 ### 1. [Technical setup](/docs/TechnicalSetup.md)
 
-
 ### 2. [Contracts](/docs/ContractsSetup.md)
-
 
 ### 3. [Customize the UI](/docs/CustomizeTheUI.md)
 
 
 ## Running the tool
 In a terminal, run `node api/app.js`
-By default, you will the site in: http://127.0.0.1:3001
+
+By default, you will see the site in: http://127.0.0.1:3001
 
 ![ui](/docs/images/ui.png)
+
+## Querying the database
+Database name: `subdomainsTool`
+Collection: `registrations`
+
+Use these commands to get all the subdomains registrations:
+
+> use subdomainsTool
+
+> db.registrations.find({})
