@@ -29,7 +29,6 @@
     "request": "2.88.0",
     "request-promise": "^4.2.4",
     "rskjs-util": "1.0.3",
-    "serve-favicon": "2.5.0",
     "web3": "1.0.0-beta.46"
   },
   "devDependencies": {
