@@ -37,7 +37,8 @@ Read about:
 
 
 ## Running the tool
-In a terminal, run `node api/app.js`
+In a terminal, run `npm install`.
+Then run `node api/app.js`.
 
 By default, you will see the site in: http://127.0.0.1:3001
 
