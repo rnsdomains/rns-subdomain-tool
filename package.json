@@ -1,10 +1,7 @@
 {
-  "name": "rns-integration-tool",
+  "name": "rns-subdomain-tool",
   "version": "1.0.0",
   "private": true,
-  "scripts": {
-    "start": "node ./api-rsk/app.js"
-  },
   "dependencies": {
     "body-parser": "1.18.2",
     "chai": "4.2.0",
