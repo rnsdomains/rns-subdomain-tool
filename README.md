@@ -26,7 +26,7 @@ Read about:
 - npm >= 6.8.0
 - MongoDB = 3.6.9
 - RecaptchaV2 keys (pair client & server)
-- A cow account: an RSK address with its private key (to pay the registrations) 
+- A cow account: an RSK address with its private key (to pay the registrations). Consider 1 subdomain registration consumes 118k gas.
 - The domain under which subdomains will be registered needs to be available or you're the owner
 - SMTP credentials (if you're interested in sending the user a register confirmation)
 - An RSK node with no limitations about requests' quantity 
