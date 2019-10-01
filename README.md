@@ -4,8 +4,14 @@ It shows 2 action flows:
 - **Register an alias:** invite a final user to register his subdomain under a given domain.
 - **Check subdomain status:** it will allow the user to check if an alias/subdomain is available or not.
 
-You can set the tool up to send an email with a template to the user confirming the registration.
-Also the tool will save information about registrations in a Mongo DB.
+Notes:
+
+:incoming_envelope: You can set the tool up to send an email with a template to the user confirming the registration.
+
+:information_source: Also the tool will save information about registrations in a Mongo DB.
+
+:raised_hand: This tool includes an option to set up a maximum number of contract calls per hour.
+
 
 Read about:
 - [Requirements](#Requirements)
