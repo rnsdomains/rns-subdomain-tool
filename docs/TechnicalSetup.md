@@ -29,7 +29,7 @@ Read about how to get them [here](https://www.google.com/recaptcha/intro/v3.html
 With your key-pair, you need to set:
 - Client key in `public/index.html` inside `data-sitekey` attribute:
 
-`<div class="g-recaptcha" data-sitekey=""></div>`
+`<div class="g-recaptcha" data-sitekey="PASTE_THE_KEY_HERE"></div>`
 
 - Server key as value of `recaptcha.key` in file `api/config.json` 
 
@@ -37,10 +37,10 @@ With your key-pair, you need to set:
 ## SMTP
 In `api/config.json` you can set up:
 
-- `"smtp.on": true`-> Notification by email is ON if this value is `true` 
+- `"smtp.on": true`-> notification by email is ON if this value is `true` 
 - `"smtp.host": ""`-> SMTP host 
 - `"smtp.port":""` -> SMTP port
 - `"smtp.user":""` -> SMTP user 
 - `"smtp.password":""` -> SMTP password 
-- `"smtp.from":"RNS Domains <hi@iovlabs.org>""` -> SMTP from for the registration result email (use this format to show as SenderName and SenderEmail)
-- `"smtp.subject":"Successful registration"` -> Mail subject for the registration result email
+- `"smtp.from":"RNS Domains <hi@iovlabs.org>""` -> SMTP from for the registration result email (use this format to see it with a sender name different to the email: `Sample Name <sample@iovlabs.org>`)
+- `"smtp.subject":"Successful registration"` -> mail subject for the registration result email

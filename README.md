@@ -5,7 +5,7 @@ It shows 2 action flows:
 - **Check subdomain status:** it will allow the user to check if an alias/subdomain is available or not.
 
 You can set the tool up to send an email with a template to the user confirming the registration.
-Also the tool will save information about registrations in a Mongo BD.
+Also the tool will save information about registrations in a Mongo DB.
 
 Read about:
 - [Requirements](#Requirements)
@@ -20,7 +20,7 @@ Read about:
 - npm >= 6.8.0
 - MongoDB = 3.6.9
 - RecaptchaV2 keys (pair client & server)
-- A cow account: an RSK address with its private key (to pay the registration) 
+- A cow account: an RSK address with its private key (to pay the registrations) 
 - The domain under which subdomains will be registered needs to be available or you're the owner
 - SMTP credentials (if you're interested in sending the user a register confirmation)
 - An RSK node with no limitations about requests' quantity 
@@ -45,8 +45,9 @@ By default, you will see the site in: http://127.0.0.1:3001
 ![ui](/docs/images/ui.png)
 
 ## Querying the database
-Database name: `subdomainsTool`
-Collection: `registrations`
+Database name: `subdomainsTool`.
+
+Collection: `registrations`.
 
 Use these commands to get all the subdomains registrations:
 

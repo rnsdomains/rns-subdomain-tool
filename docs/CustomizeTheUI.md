@@ -15,8 +15,9 @@
 
 ## Registration email template
 You can change registration email template replacing this file: `api/resources/emailBody.html`
+
 **IMPORTANT**: you need to include the tokens: `_domain_`, `_address_` and `_txHash_` in your template and the tool will replace them with the users' information. 
-By default the template is like this:
+By default the template is:
 
 ![email example](/docs/images/email.png)
 
