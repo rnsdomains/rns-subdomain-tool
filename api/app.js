@@ -50,10 +50,6 @@ var staticOptions = {
     }
 }
 
-app.get('/*', function (req, res, next) {    
-    next();
-});
- 
 function shouldCompress (req, res) {
     if (req.headers['x-no-compression']) {
       return false
@@ -171,6 +167,21 @@ app.post('/setSubdomainNode', cors(options), async function (req, res) {
         return res.status(500).send(result)
     }
 })
+
+/// catch 404 and forwarding to error handler
+app.use(function(req, res, next) {
+    var err = new Error('Not Found');
+    err.status = 404;
+    next(err);
+});
+
+app.use(function(err, req, res) {
+    res.status(err.status || 500);
+    res.render('error', {
+        message: err.message,
+        error: {}
+    });
+});
 
 function reachCallLimit(){ 
     updateCacheDateIfNecessary();
