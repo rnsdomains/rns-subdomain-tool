@@ -166,14 +166,6 @@
         showTxProgress(data.txHash);
     }
 
-    var config = {
-        "custom": {
-            "parentDomain" : ".example.rsk",
-            "title": "Example",
-            "logoClickUrl": "http://www.rsk.co"
-        }
-    };
-
     function registerHide() {
         $("#divBtnCheckStatus").show();
         $('#register-form').hide();
