@@ -15,8 +15,8 @@ In `api/config.json` you can set up:
 - `"gasLimit": "0x67C280"`-> gasLimit used when registering a subnode (suggested `0x67C280`)
 - `"contractLimitCallsPerHour": 1000` -> it's a validation related with the maximum amount of times you allow the tool to call the smart contract per hour
 
-Also in `public/config.json` you need to set up:
-- `"api.host": "127.0.0.1:3001"` -> with the URL where the tool is deployed
+Also in `public/index.js` you need to set up:
+- `API_URL": "http://127.0.0.1:3001"` -> with the URL where the tool is deployed
 
 
 ## Recaptcha
